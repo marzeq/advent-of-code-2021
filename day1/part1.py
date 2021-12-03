@@ -1,5 +1,5 @@
 with open("input.txt", "r") as f:
-    measurements = [int(x) for x in f.readlines()]
+    measurements = [int(x) for x in f.read().split("\n")]
 
 prev = None
 increase_count = 0

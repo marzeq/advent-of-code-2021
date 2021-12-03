@@ -1,5 +1,6 @@
 with open("input.txt", "r") as f:
-    commands = [(x.split()[0], int(x.split()[1])) for x in f.readlines()]
+    commands = [(x.split()[0], int(x.split()[1]))
+                for x in f.read().split("\n")]
 
 horizontal_pos, depth, aim = 0, 0, 0
 

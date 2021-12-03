@@ -1,11 +1,12 @@
 with open("input.txt", "r") as f:
-    measurements = [int(x) for x in f.readlines()]
+    measurements = [int(x) for x in f.read().split("\n")]
 
 threes = []
 
 for i in range(len(measurements)):
     if i + 2 < len(measurements):
-        threes.append(sum([measurements[i], measurements[i+1], measurements[i+2]]))
+        threes.append(
+            sum([measurements[i], measurements[i+1], measurements[i+2]]))
 
 prev = None
 increase_count = 0
